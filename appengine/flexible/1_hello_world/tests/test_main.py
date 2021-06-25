@@ -13,4 +13,5 @@ class TestHello:
     def test_hello_response(self, client):
         response = client.get(self.ENDPOINT)
         response_decoded = json.loads(response.data.decode("utf-8"))
-        assert response_decoded == {"hello": "App Engine Standard"}
+        exp_res = {"hello": "App Engine Standard", "version": "1.0.0"}
+        assert response_decoded == exp_res

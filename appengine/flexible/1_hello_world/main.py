@@ -8,7 +8,7 @@ api = Api(app)
 @api.route("/hello")
 class HelloWorld(Resource):
     def get(self):
-        return {"hello": "App Engine Standard"}
+        return {"hello": "App Engine Standard", "version": "1.0.0"}
 
 
 if __name__ == "__main__":
